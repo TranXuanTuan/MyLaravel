@@ -1,0 +1,63 @@
+header {
+  background-color: #bdcfff;
+}
+
+header .header {
+  position: relative;
+}
+
+header .header .login-info {
+  position: absolute;
+  list-style: none outside none;
+  right: 0;
+  top: 0;
+}
+
+header .header .login-info li {
+  display: inline-block;
+}
+
+nav {
+  background-color: #0b2e13;
+  margin-top: 15px;
+}
+
+nav ul {
+  list-style: none outside none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 5px;
+}
+
+nav ul li a {
+  color: #fff;
+}
+
+footer {
+  background-color: #0b2e13;
+}
+
+footer p {
+  color: #fff;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.category-title {
+  background-color: #eee;
+  color: #000;
+  padding: 10px;
+}
+
+.book-info {
+  border: solid 1px #eee;
+  padding: 5px;
+}
+
+.book-info .book-order {
+  margin-top: 10px;
+  text-align: center;
+}
+

@@ -1,23 +1,19 @@
 @extends('frontend.layouts.content')
 
 @section('content')
-
-<h2>Category List</h2>
-@if(empty($categories))
-	<p class="errors">Data Empty</p>
-@else
-	<table class="table table-bordered">
-		<tr>
-			<th>ID</th>
-			<th>Name</th>
-		</tr>
-		@foreach($categories as $key => $category)
-		<tr>
-			<td>{{$key+1}}</td>
-			<td>{{$category->name}}</td>
-		</tr>
-		@endforeach
-	</table>
-@endif
-
-@endsection
+    @if(empty($categories))
+        <p class="error">Data empty</p>
+    @else
+        <div class="row">
+            @foreach($categories as $key => $category)
+                <div class="col-3">
+                    <div class="category-content">
+                        <h2 class="category-name">{{ $category->name }}</h2>
+                        <p class="book-number">Số quyển sách: {{ $category->books()->count() }}</p>
+                        <p class="read-more"><a href="{{ route('book-index', ['category_id' => $category->id]) }}">Xem chi tiết</a></p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
+@stop
